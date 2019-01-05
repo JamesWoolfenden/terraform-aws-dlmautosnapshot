@@ -1,0 +1,4 @@
+variable "schedule" {
+type="map"
+}
+
