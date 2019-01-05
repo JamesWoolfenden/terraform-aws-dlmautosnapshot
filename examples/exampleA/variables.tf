@@ -1,4 +1,3 @@
 variable "schedule" {
-type="map"
+  type = "map"
 }
-

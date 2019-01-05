@@ -1,4 +1,4 @@
 module "ebsnapshot" {
-  source          = "../../"
-  schedule="${var.schedule}"
+  source   = "../../"
+  schedule = "${var.schedule}"
 }
