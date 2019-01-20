@@ -35,8 +35,8 @@ As before you include a reference to the module in your code.
 
 In the example the variable schedule is an extensible list of maps.
 
-~~~ JSON
-schedule = [{
+~~~JSON
+  schedule = [{
       name = "2 weeks of daily snapshots"
       create_rule=[{
         interval      = 24
@@ -57,7 +57,9 @@ schedule = [{
 ]
 ~~~
 
-That's all for now.## Inputs
+That's all for now.
+
+## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
@@ -135,8 +137,6 @@ See [LICENSE](LICENSE) for full details.
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-
-
 
 [logo]: docs/slalom-logo.png
 [website]: https://slalom.com

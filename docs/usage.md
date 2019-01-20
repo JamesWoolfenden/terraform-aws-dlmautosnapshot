@@ -7,8 +7,8 @@ As before you include a reference to the module in your code.
 
 In the example the variable schedule is an extensible list of maps.
 
-~~~ JSON
-schedule = [{
+~~~JSON
+   schedule = [{
       name = "2 weeks of daily snapshots"
       create_rule=[{
         interval      = 24
