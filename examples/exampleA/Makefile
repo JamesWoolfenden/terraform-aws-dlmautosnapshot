@@ -4,7 +4,7 @@
 all: init plan build
 
 init:
-	rm -rf .terraform/modules/
+	rm -rf .terraform/
 	terraform init -reconfigure
 
 plan: init
@@ -25,4 +25,3 @@ docs:
 valid:
 	tflint
 	terraform fmt -check=true -diff=true
-

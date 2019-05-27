@@ -1,4 +1,5 @@
 module "ebsnapshot" {
-  source   = "github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot"
-  schedule = "${var.schedule}"
+  source      = "../../"
+  schedule    = var.schedule
+  common_tags = var.common_tags
 }
