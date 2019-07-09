@@ -3,13 +3,6 @@ variable "schedule" {
   type        = list
 }
 
-variable "region" {
-
-  description = "AWS region"
-  default     = "eu-west-1"
-  type        = string
-}
-
 variable "schedule_name" {
   default = "2 weeks of daily snapshots"
 }

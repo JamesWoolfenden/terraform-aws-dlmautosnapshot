@@ -1,5 +1,5 @@
 variable "schedule" {
-  type = "list"
+  type = list
 }
 
 variable "common_tags" {
