@@ -8,8 +8,6 @@ Terraform module - creates ups data lifecycle management to automate ebs backups
 
 ---
 
-This project uses the "build-harness" a modified version of the project ["SweetOps"](https://cpco.io/sweetops) from Cloudposse. Sweet indeed.
-
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
@@ -65,8 +63,6 @@ That's all for now.
 |------|-------------|:----:|:-----:|:-----:|
 | schedule | - | list | - | yes |
 
-
-
 ## Related Projects
 
 Check out these related projects.
@@ -116,7 +112,6 @@ See [LICENSE](LICENSE) for full details.
 
   [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
 
-
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 
@@ -130,5 +125,4 @@ See [LICENSE](LICENSE) for full details.
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-dlmautowsnapshot&url=https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot
 [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot
-[share_googleplus]: https://plus.google.com/share?url=https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot
 [share_email]: mailto:?subject=terraform-aws-dlmautowsnapshot&body=https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot
