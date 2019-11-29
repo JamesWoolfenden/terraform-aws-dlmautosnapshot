@@ -1,8 +1,8 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-dlmautowsnapshot [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-dlmautowsnapshot.svg)](https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot/releases/latest)
+# terraform-aws-dlmautosnapshot [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot/workflows/Bump%20version/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-dlmautosnapshot.svg)](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot/releases/latest)
 
-Terraform module - creates ups data lifecycle management to automate ebs backups.
+Terraform module - creates ups data life-cycle management to automate ebs backups.
 
 ---
 
@@ -15,7 +15,7 @@ Include this repository as a module in your existing terraform code:
 ```terraform
 module "dlmautowsnapshot" {
   source          = "JamesWoolfenden/dlmautowsnapshot/aws"
-  version         = "0.0.2"
+  version         = "0.2.9"
   common_tags     = var.common_tags
   snapshot_name   = local.snapshot_name
   cron_expression = var.cron_expression
