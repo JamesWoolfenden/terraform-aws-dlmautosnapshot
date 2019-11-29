@@ -1,6 +1,6 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-dlmautosnapshot [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot/workflows/Bump%20version/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-dlmautosnapshot.svg)](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot/releases/latest)
+# terraform-aws-dlmautosnapshot [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-dlmautosnapshot.svg)](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot/releases/latest)
 
 Terraform module - creates ups data life-cycle management to automate ebs backups.
 
