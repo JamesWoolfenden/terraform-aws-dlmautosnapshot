@@ -23,8 +23,8 @@ module "dlmautowsnapshot" {
 }
 ```
 
-The management of EC2 backup has become simpler With the new release of Data Lifecycle Manager (DLM) policies https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html.
-There is no more need for a Lambdas to manage EBS snapshots, and additionally with the new release of support for DLM in Terraform https://www.terraform.io/docs/providers/aws/r/dlm_lifecycle_policy.html it can achieved easily.
+The management of EC2 backup has become simpler With the new release of Data Lifecycle Manager (DLM) policies <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html>.
+There is no more need for a Lambdas to manage EBS snapshots, and additionally with the new release of support for DLM in Terraform <https://www.terraform.io/docs/providers/aws/r/dlm_lifecycle_policy.html> it can achieved easily.
 
 The example - exampleA shows how to implement a DLM policy on EBS snapshots.
 As before you include a reference to the module in your code.
@@ -59,7 +59,20 @@ That's all for now.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| schedule | - | list | - | yes |
+| common\_tags | Implements the common tags scheme | map | n/a | yes |
+| schedule | The DLM Schedule | list | n/a | yes |
+| schedule\_copy\_tags |  | string | `"false"` | no |
+| schedule\_interval | Interval between | number | `"24"` | no |
+| schedule\_interval\_unit | Schedile Interval Unit | string | `"HOURS"` | no |
+| schedule\_name | Name of the Schedule | string | `"2 weeks of daily snapshots"` | no |
+| schedule\_retain |  | number | `"14"` | no |
+| schedule\_times | When the policy should run | string | `"23:45"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| lifecycle |  |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Related Projects
