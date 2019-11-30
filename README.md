@@ -1,9 +1,8 @@
-
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-dlmautowsnapshot [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-dlmautowsnapshot.svg)](https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot/releases/latest)
+# terraform-aws-dlmautosnapshot [![Build Status](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-dlmautosnapshot.svg)](https://github.com/JamesWoolfenden/terraform-aws-dlmautosnapshot/releases/latest)
 
-Terraform module - creates ups data lifecycle management to automate ebs backups.
+Terraform module - creates ups data life-cycle management to automate ebs backups.
 
 ---
 
@@ -13,19 +12,19 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 Include this repository as a module in your existing terraform code:
 
-``` HCL
+```terraform
 module "dlmautowsnapshot" {
   source          = "JamesWoolfenden/dlmautowsnapshot/aws"
-  version         = "0.0.2"
-  common_tags     = "${var.common_tags}"
-  snapshot_name   = "${local.snapshot_name}"
-  cron_expression = "${var.cron_expression}"
-  regions         = "${var.regions}"
+  version         = "0.2.9"
+  common_tags     = var.common_tags
+  snapshot_name   = local.snapshot_name
+  cron_expression = var.cron_expression
+  regions         = var.regions
 }
 ```
 
-The management of EC2 backup has become simpler With the new release of Data Lifecycle Manager (DLM) policies https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html.
-There is no more need for a Lambdas to manage EBS snapshots, and additionally with the new release of support for DLM in Terraform https://www.terraform.io/docs/providers/aws/r/dlm_lifecycle_policy.html it can achieved easily.
+The management of EC2 backup has become simpler With the new release of Data Lifecycle Manager (DLM) policies <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html>.
+There is no more need for a Lambdas to manage EBS snapshots, and additionally with the new release of support for DLM in Terraform <https://www.terraform.io/docs/providers/aws/r/dlm_lifecycle_policy.html> it can achieved easily.
 
 The example - exampleA shows how to implement a DLM policy on EBS snapshots.
 As before you include a reference to the module in your code.
@@ -60,7 +59,21 @@ That's all for now.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| schedule | - | list | - | yes |
+| common\_tags | Implements the common tags scheme | map | n/a | yes |
+| schedule | The DLM Schedule | list | n/a | yes |
+| schedule\_copy\_tags |  | string | `"false"` | no |
+| schedule\_interval | Interval between | number | `"24"` | no |
+| schedule\_interval\_unit | Schedile Interval Unit | string | `"HOURS"` | no |
+| schedule\_name | Name of the Schedule | string | `"2 weeks of daily snapshots"` | no |
+| schedule\_retain |  | number | `"14"` | no |
+| schedule\_times | When the policy should run | string | `"23:45"` | no |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| lifecycle |  |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Related Projects
 
