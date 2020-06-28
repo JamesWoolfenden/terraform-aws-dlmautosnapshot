@@ -60,6 +60,10 @@ In the example the variable schedule is an extensible list of maps.
 
 That's all for now.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
@@ -69,7 +73,7 @@ That's all for now.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | common\_tags | Implements the common tags scheme | `map` | n/a | yes |
 | schedule | The DLM Schedule | `list` | n/a | yes |
 | schedule\_copy\_tags | n/a | `bool` | `false` | no |
@@ -142,8 +146,8 @@ under the License.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-dlmautowsnapshot&url=https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-dlmautowsnapshot&url=https://github.com/JamesWoolfenden/terraform-aws-dlmautowsnapshot
