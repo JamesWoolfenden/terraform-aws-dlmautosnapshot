@@ -59,7 +59,6 @@ In the example the variable schedule is an extensible list of maps.
 That's all for now.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -67,27 +66,27 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name                   | Description                       | Type     | Default                        | Required |
-| ---------------------- | --------------------------------- | -------- | ------------------------------ | :------: |
-| common_tags            | Implements the common tags scheme | `map`    | n/a                            |   yes    |
-| schedule               | The DLM Schedule                  | `list`   | n/a                            |   yes    |
-| schedule_copy_tags     | n/a                               | `bool`   | `false`                        |    no    |
-| schedule_interval      | Interval between                  | `number` | `24`                           |    no    |
-| schedule_interval_unit | Schedile Interval Unit            | `string` | `"HOURS"`                      |    no    |
-| schedule_name          | Name of the Schedule              | `string` | `"2 weeks of daily snapshots"` |    no    |
-| schedule_retain        | n/a                               | `number` | `14`                           |    no    |
-| schedule_times         | When the policy should run        | `string` | `"23:45"`                      |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| schedule | The DLM Schedule | `list` | n/a | yes |
+| schedule\_copy\_tags | n/a | `bool` | `false` | no |
+| schedule\_interval | Interval between | `number` | `24` | no |
+| schedule\_interval\_unit | Schedile Interval Unit | `string` | `"HOURS"` | no |
+| schedule\_name | Name of the Schedule | `string` | `"2 weeks of daily snapshots"` | no |
+| schedule\_retain | n/a | `number` | `14` | no |
+| schedule\_times | When the policy should run | `string` | `"23:45"` | no |
 
 ## Outputs
 
-| Name      | Description |
-| --------- | ----------- |
-| lifecycle | n/a         |
+| Name | Description |
+|------|-------------|
+| lifecycle | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
