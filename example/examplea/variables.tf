@@ -1,7 +1,7 @@
 variable "schedule" {
-  type = list
+  type = list(any)
 }
 
 variable "common_tags" {
-  type = map
+  type = map(any)
 }
