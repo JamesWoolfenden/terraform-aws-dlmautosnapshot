@@ -1,6 +1,6 @@
 variable "schedule" {
   description = "The DLM Schedule"
-  type        = list
+  type        = list(any)
 }
 
 variable "schedule_name" {
@@ -37,5 +37,5 @@ variable "schedule_copy_tags" {
 
 variable "common_tags" {
   description = "Implements the common tags scheme"
-  type        = map
+  type        = map(any)
 }

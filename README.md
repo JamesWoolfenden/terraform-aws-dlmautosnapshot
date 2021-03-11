@@ -73,12 +73,25 @@ No requirements.
 |------|---------|
 | aws | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_dlm_lifecycle_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dlm_lifecycle_policy) |
+| [aws_iam_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) |
+| [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) |
+| [aws_iam_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
-| schedule | The DLM Schedule | `list` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map(any)` | n/a | yes |
+| schedule | The DLM Schedule | `list(any)` | n/a | yes |
 | schedule\_copy\_tags | n/a | `bool` | `false` | no |
 | schedule\_interval | Interval between | `number` | `24` | no |
 | schedule\_interval\_unit | Schedile Interval Unit | `string` | `"HOURS"` | no |
@@ -91,7 +104,6 @@ No requirements.
 | Name | Description |
 |------|-------------|
 | lifecycle | n/a |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
