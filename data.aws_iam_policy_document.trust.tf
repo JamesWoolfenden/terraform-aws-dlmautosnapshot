@@ -6,7 +6,7 @@ data "aws_iam_policy_document" "trust" {
     ]
 
     principals {
-      type        = "service"
+      type        = "Service"
       identifiers = ["dlm.amazonaws.com"]
     }
   }
