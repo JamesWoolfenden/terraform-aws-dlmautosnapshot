@@ -63,15 +63,16 @@ In the example the variable schedule is an extensible list of maps.
 That's all for now.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| Name                                             | Version |
+| ------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
 
 ## Modules
 
@@ -79,32 +80,33 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_dlm_lifecycle_policy.lifecycle](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dlm_lifecycle_policy) | resource |
-| [aws_iam_role.dlm_lifecycle](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy.dlm_lifecycle](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
-| [aws_iam_policy_document.dlm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
-| [aws_iam_policy_document.trust](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| Name                                                                                                                                   | Type        |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [aws_dlm_lifecycle_policy.lifecycle](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dlm_lifecycle_policy) | resource    |
+| [aws_iam_role.dlm_lifecycle](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                     | resource    |
+| [aws_iam_role_policy.dlm_lifecycle](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy)       | resource    |
+| [aws_iam_policy_document.dlm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document)      | data source |
+| [aws_iam_policy_document.trust](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document)    | data source |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implements the common tags scheme | `map(any)` | n/a | yes |
-| <a name="input_schedule"></a> [schedule](#input\_schedule) | The DLM Schedule | `list(any)` | n/a | yes |
-| <a name="input_schedule_copy_tags"></a> [schedule\_copy\_tags](#input\_schedule\_copy\_tags) | n/a | `bool` | `false` | no |
-| <a name="input_schedule_interval"></a> [schedule\_interval](#input\_schedule\_interval) | Interval between | `number` | `24` | no |
-| <a name="input_schedule_interval_unit"></a> [schedule\_interval\_unit](#input\_schedule\_interval\_unit) | Schedile Interval Unit | `string` | `"HOURS"` | no |
-| <a name="input_schedule_name"></a> [schedule\_name](#input\_schedule\_name) | Name of the Schedule | `string` | `"2 weeks of daily snapshots"` | no |
-| <a name="input_schedule_retain"></a> [schedule\_retain](#input\_schedule\_retain) | n/a | `number` | `14` | no |
-| <a name="input_schedule_times"></a> [schedule\_times](#input\_schedule\_times) | When the policy should run | `string` | `"23:45"` | no |
+| Name                                                                                                | Description                       | Type        | Default                        | Required |
+| --------------------------------------------------------------------------------------------------- | --------------------------------- | ----------- | ------------------------------ | :------: |
+| <a name="input_common_tags"></a> [common_tags](#input_common_tags)                                  | Implements the common tags scheme | `map(any)`  | n/a                            |   yes    |
+| <a name="input_schedule"></a> [schedule](#input_schedule)                                           | The DLM Schedule                  | `list(any)` | n/a                            |   yes    |
+| <a name="input_schedule_copy_tags"></a> [schedule_copy_tags](#input_schedule_copy_tags)             | n/a                               | `bool`      | `false`                        |    no    |
+| <a name="input_schedule_interval"></a> [schedule_interval](#input_schedule_interval)                | Interval between                  | `number`    | `24`                           |    no    |
+| <a name="input_schedule_interval_unit"></a> [schedule_interval_unit](#input_schedule_interval_unit) | Schedile Interval Unit            | `string`    | `"HOURS"`                      |    no    |
+| <a name="input_schedule_name"></a> [schedule_name](#input_schedule_name)                            | Name of the Schedule              | `string`    | `"2 weeks of daily snapshots"` |    no    |
+| <a name="input_schedule_retain"></a> [schedule_retain](#input_schedule_retain)                      | n/a                               | `number`    | `14`                           |    no    |
+| <a name="input_schedule_times"></a> [schedule_times](#input_schedule_times)                         | When the policy should run        | `string`    | `"23:45"`                      |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_lifecycle"></a> [lifecycle](#output\_lifecycle) | n/a |
+| Name                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| <a name="output_lifecycle"></a> [lifecycle](#output_lifecycle) | n/a         |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
@@ -127,7 +129,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2019-2022 James Woolfenden
 
 ## License
 
