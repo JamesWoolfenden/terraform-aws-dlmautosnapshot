@@ -71,7 +71,7 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.31.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -127,6 +127,26 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "dlm:CreateLifecyclePolicy",
+                "dlm:DeleteLifecyclePolicy",
+                "dlm:GetLifecyclePolicy",
+                "dlm:ListTagsForResource",
+                "dlm:UpdateLifecyclePolicy"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeAccountAttributes"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
                 "iam:CreateRole",
                 "iam:DeleteRole",
                 "iam:DeleteRolePolicy",
@@ -137,6 +157,15 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListRolePolicies",
                 "iam:PutRolePolicy",
                 "iam:TagRole"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "kms:DescribeKey",
+                "kms:ListAliases"
             ],
             "Resource": "*"
         }
